@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 移动端自适应必备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XX公司-产品介绍官网</title>
+    <!-- Tailwind CDN 在线引入 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 阿里图标库（可选，需要图标再加） -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- JS代码放页面底部 -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- 顶部导航栏 -->
+    <header class="bg-slate-800 text-white p-4">
+      <div
+        class="max-w-7xl mx-auto w-full flex items-center justify-between gap-6"
+      >
+        <div class="text-xl font-bold">XX科技有限公司</div>
+        <div class="flex-1 flex justify-end">
+          <div
+            class="bg-slate-700 rounded-2xl px-5 py-4 flex flex-col md:flex-row md:items-center gap-6 text-gray-300"
+          >
+            <div class="flex items-center gap-4">
+              <h4 class="text-lg font-bold">快速导航</h4>
+              <span class="h-5 w-px bg-white/70"></span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <a href="index.html" class="hover:text-white">首页</a>
+              <a href="products.html" class="hover:text-white">产品中心</a>
+              <a href="about.html" class="hover:text-white">关于我们</a>
+              <a href="cooperation.html" class="hover:text-white">合作案例</a>
+              <a
+                href="contact.html"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                >立即询价</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 模块1：首屏Banner -->
+    <section class="relative h-[500px] overflow-hidden">
+      <img
+        src="./assets/images/about/about-banner.png"
+        alt="企业厂房全景"
+        class="w-full h-full object-cover"
+      />
+      <!-- 半透明遮罩 -->
+      <div
+        class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white"
+      >
+        <h1 class="text-5xl font-bold mb-4">关于我们 · 企业简介</h1>
+        <div class="w-20 h-1 bg-blue-500 mb-6"></div>
+        <p class="text-xl text-gray-100">深耕智能工业设备，赋能数字化工厂</p>
+      </div>
+    </section>
+
+    <!-- 模块2：企业简介 -->
+    <section class="py-16 px-8 max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="w-16 h-1 bg-blue-500 mx-auto mb-4"></div>
+        <h2 class="text-3xl font-bold">企业概况</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="text-gray-600 space-y-4 text-base leading-relaxed">
+          <p>
+            <strong class="text-black text-lg">基础信息：</strong
+            >本公司2016年正式成立，是专业研发、生产、销售工业智能设备的高新技术企业，主营6大系列产品：工业智能设备A100、高精度检测设备B200、自动化模组C300、智能控制柜D400、物料输送机械E500、配套传感模块F600。
+          </p>
+          <p>
+            <strong class="text-black text-lg">企业规模：</strong
+            >自有标准化厂房12000㎡，员工260余人，其中研发技术团队占比35%，配备独立恒温研发实验室。
+          </p>
+          <p>
+            <strong class="text-black text-lg">企业文化：</strong
+            >使命——以智能装备助力制造业升级；愿景——成为国内工业自动化头部服务商；价值观：技术为本、品质为先、客户至上。
+          </p>
+          <p>
+            <strong class="text-black text-lg">行业优势：</strong
+            >深耕自动化行业10年，服务汽车、电子、新能源、食品加工数十类行业，国内覆盖30+省市，产品出口东南亚多国，拥有完善经销与售后网络。
+          </p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg card-hover">
+          <img
+            src="./assets/images/about/factory-overview.png"
+            alt="厂区全景"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块3：发展历程（浅灰背景 纯横向时间轴） -->
+    <section class="py-16 px-8 bg-gray-100">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="w-16 h-1 bg-blue-500 mx-auto mb-4"></div>
+          <h2 class="text-3xl font-bold">发展历程</h2>
+        </div>
+
+        <!-- 横向时间轴容器 -->
+        <div class="relative hidden lg:block">
+          <!-- 贯穿所有节点的中间蓝色横线 -->
+          <div
+            class="absolute top-[2.25rem] left-0 right-0 h-[2px] bg-blue-500 z-0"
+          ></div>
+          <div class="grid grid-cols-5 gap-4 relative z-10">
+            <!-- 年份节点1 -->
+            <div class="flex flex-col items-center">
+              <div class="w-4 h-4 rounded-full bg-blue-500 mb-6"></div>
+              <div
+                class="bg-white p-6 rounded-lg shadow text-center card-hover w-full"
+              >
+                <i class="fa-solid fa-building text-blue-500 text-3xl mb-4"></i>
+                <h4 class="text-2xl font-bold text-blue-500 mb-2">2016</h4>
+                <p class="text-gray-600">公司成立，搭建独立研发实验室</p>
+              </div>
+            </div>
+            <!-- 年份节点2 -->
+            <div class="flex flex-col items-center">
+              <div class="w-4 h-4 rounded-full bg-blue-500 mb-6"></div>
+              <div
+                class="bg-white p-6 rounded-lg shadow text-center card-hover w-full"
+              >
+                <i
+                  class="fa-solid fa-microchip text-blue-500 text-3xl mb-4"
+                ></i>
+                <h4 class="text-2xl font-bold text-blue-500 mb-2">2018</h4>
+                <p class="text-gray-600">首款智能检测设备A100量产下线</p>
+              </div>
+            </div>
+            <!-- 年份节点3 -->
+            <div class="flex flex-col items-center">
+              <div class="w-4 h-4 rounded-full bg-blue-500 mb-6"></div>
+              <div
+                class="bg-white p-6 rounded-lg shadow text-center card-hover w-full"
+              >
+                <i
+                  class="fa-solid fa-certificate text-blue-500 text-3xl mb-4"
+                ></i>
+                <h4 class="text-2xl font-bold text-blue-500 mb-2">2020</h4>
+                <p class="text-gray-600">通过ISO9001质量管理体系认证</p>
+              </div>
+            </div>
+            <!-- 年份节点4 -->
+            <div class="flex flex-col items-center">
+              <div class="w-4 h-4 rounded-full bg-blue-500 mb-6"></div>
+              <div
+                class="bg-white p-6 rounded-lg shadow text-center card-hover w-full"
+              >
+                <i class="fa-solid fa-globe text-blue-500 text-3xl mb-4"></i>
+                <h4 class="text-2xl font-bold text-blue-500 mb-2">2022</h4>
+                <p class="text-gray-600">拓展全国经销商，开拓海外市场</p>
+              </div>
+            </div>
+            <!-- 年份节点5 -->
+            <div class="flex flex-col items-center">
+              <div class="w-4 h-4 rounded-full bg-blue-500 mb-6"></div>
+              <div
+                class="bg-white p-6 rounded-lg shadow text-center card-hover w-full"
+              >
+                <i class="fa-solid fa-gears text-blue-500 text-3xl mb-4"></i>
+                <h4 class="text-2xl font-bold text-blue-500 mb-2">2025</h4>
+                <p class="text-gray-600">新一代自动化模组全系列升级</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 平板/手机：恢复你原来的竖向网格布局，小屏幕不挤 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden mt-6">
+          <!-- 年份节点1 -->
+          <div class="bg-white p-6 rounded-lg shadow text-center card-hover">
+            <i class="fa-solid fa-building text-blue-500 text-3xl mb-4"></i>
+            <h4 class="text-2xl font-bold text-blue-500 mb-2">2016</h4>
+            <p class="text-gray-600">公司成立，搭建独立研发实验室</p>
+          </div>
+          <!-- 年份节点2 -->
+          <div class="bg-white p-6 rounded-lg shadow text-center card-hover">
+            <i class="fa-solid fa-microchip text-blue-500 text-3xl mb-4"></i>
+            <h4 class="text-2xl font-bold text-blue-500 mb-2">2018</h4>
+            <p class="text-gray-600">首款智能检测设备A100量产下线</p>
+          </div>
+          <!-- 年份节点3 -->
+          <div class="bg-white p-6 rounded-lg shadow text-center card-hover">
+            <i class="fa-solid fa-certificate text-blue-500 text-3xl mb-4"></i>
+            <h4 class="text-2xl font-bold text-blue-500 mb-2">2020</h4>
+            <p class="text-gray-600">通过ISO9001质量管理体系认证</p>
+          </div>
+          <!-- 年份节点4 -->
+          <div class="bg-white p-6 rounded-lg shadow text-center card-hover">
+            <i class="fa-solid fa-globe text-blue-500 text-3xl mb-4"></i>
+            <h4 class="text-2xl font-bold text-blue-500 mb-2">2022</h4>
+            <p class="text-gray-600">拓展全国经销商，开拓海外市场</p>
+          </div>
+          <!-- 年份节点5 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow text-center card-hover md:col-span-2"
+          >
+            <i class="fa-solid fa-gears text-blue-500 text-3xl mb-4"></i>
+            <h4 class="text-2xl font-bold text-blue-500 mb-2">2025</h4>
+            <p class="text-gray-600">新一代自动化模组全系列升级</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块4：四大核心实力 -->
+    <section class="py-16 px-8 max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="w-16 h-1 bg-blue-500 mx-auto mb-4"></div>
+        <h2 class="text-3xl font-bold">四大核心实力</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 研发实力 -->
+        <div class="bg-white p-6 rounded shadow card-hover">
+          <div class="w-10 h-10 mb-4 text-blue-500 text-3xl flex items-center">
+            <i class="fa-solid fa-flask"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">研发实力</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            35%专业研发团队，持有20余项发明/实用新型专利；自有独立实验室，与本地理工院校达成产学研长期合作。
+          </p>
+        </div>
+        <!-- 生产实力 -->
+        <div class="bg-white p-6 rounded shadow card-hover">
+          <div class="w-10 h-10 mb-4 text-blue-500 text-3xl flex items-center">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">生产实力</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            全自动化机械臂产线，高精度CNC加工设备，恒温无尘组装车间，规模化稳定交付。
+          </p>
+        </div>
+        <!-- 品控实力 -->
+        <div class="bg-white p-6 rounded shadow card-hover">
+          <div class="w-10 h-10 mb-4 text-blue-500 text-3xl flex items-center">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">品控实力</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            全流程三道出厂检测工序，配备精密光学质检设备，严格遵循ISO质量管控标准。
+          </p>
+        </div>
+        <!-- 服务实力 -->
+        <div class="bg-white p-6 rounded shadow card-hover">
+          <div class="w-10 h-10 mb-4 text-blue-500 text-3xl flex items-center">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">服务实力</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            全国线下服务网点，7×24小时技术热线；支持产线需求一对一设备定制开发。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块5：荣誉资质（浅灰背景） -->
+    <section class="py-16 px-8 bg-gray-100">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="w-16 h-1 bg-blue-500 mx-auto mb-4"></div>
+          <h2 class="text-3xl font-bold">荣誉资质</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 资质1 -->
+          <div class="bg-white rounded shadow overflow-hidden card-hover">
+            <img
+              src="./assets/images/about/cert-iso.png"
+              alt="ISO9001证书"
+              class="w-full h-52 object-cover"
+            />
+            <div class="p-4 text-center">
+              <p class="font-bold">ISO9001质量管理体系证书</p>
+            </div>
+          </div>
+          <!-- 资质2 -->
+          <div class="bg-white rounded shadow overflow-hidden card-hover">
+            <img
+              src="./assets/images/about/cert-hightech.png"
+              alt="高新技术企业"
+              class="w-full h-52 object-cover"
+            />
+            <div class="p-4 text-center">
+              <p class="font-bold">高新技术企业认定证书</p>
+            </div>
+          </div>
+          <!-- 资质3 -->
+          <div class="bg-white rounded shadow overflow-hidden card-hover">
+            <img
+              src="./assets/images/about/cert-patent.png"
+              alt="专利证书"
+              class="w-full h-52 object-cover"
+            />
+            <div class="p-4 text-center">
+              <p class="font-bold">多项产品发明专利证书</p>
+            </div>
+          </div>
+          <!-- 资质4 -->
+          <div class="bg-white rounded shadow overflow-hidden card-hover">
+            <img
+              src="./assets/images/about/cert-award.png"
+              alt="行业奖项"
+              class="w-full h-52 object-cover"
+            />
+            <div class="p-4 text-center">
+              <p class="font-bold">行业优秀供应商荣誉奖项</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块6：核心团队 -->
+    <section class="py-16 px-8 max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="w-16 h-1 bg-blue-500 mx-auto mb-4"></div>
+        <h2 class="text-3xl font-bold">核心技术团队</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 团队1 -->
+        <div class="bg-white rounded shadow overflow-hidden card-hover">
+          <img
+            src="./assets/images/about/team1.png"
+            alt="研发总监"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-5 text-center">
+            <h4 class="text-xl font-bold">张工</h4>
+            <p class="text-blue-500 mt-1">研发总监</p>
+            <p class="text-gray-500 text-sm mt-2">
+              12年自动化设备研发经验，主导多款核心设备开发
+            </p>
+          </div>
+        </div>
+        <!-- 团队2 -->
+        <div class="bg-white rounded shadow overflow-hidden card-hover">
+          <img
+            src="./assets/images/about/team2.png"
+            alt="生产总工"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-5 text-center">
+            <h4 class="text-xl font-bold">李工</h4>
+            <p class="text-blue-500 mt-1">生产总工</p>
+            <p class="text-gray-500 text-sm mt-2">
+              精通精密产线搭建，10年制造业生产管理经验
+            </p>
+          </div>
+        </div>
+        <!-- 团队3 -->
+        <div class="bg-white rounded shadow overflow-hidden card-hover">
+          <img
+            src="./assets/images/about/team3.png"
+            alt="品控负责人"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-5 text-center">
+            <h4 class="text-xl font-bold">王工</h4>
+            <p class="text-blue-500 mt-1">品控负责人</p>
+            <p class="text-gray-500 text-sm mt-2">
+              资深质量管控专家，搭建全流程质检体系
+            </p>
+          </div>
+        </div>
+        <!-- 团队4 -->
+        <div class="bg-white rounded shadow overflow-hidden card-hover">
+          <img
+            src="./assets/images/about/team4.png"
+            alt="售后技术负责人"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-5 text-center">
+            <h4 class="text-xl font-bold">刘工</h4>
+            <p class="text-blue-500 mt-1">售后技术负责人</p>
+            <p class="text-gray-500 text-sm mt-2">
+              7年设备现场调试经验，统筹全国技术服务
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块7：厂区实景图集 -->
+    <section class="py-16 px-8 bg-gray-100">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="w-16 h-1 bg-blue-500 mx-auto mb-4"></div>
+          <h2 class="text-3xl font-bold">厂区环境实拍</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded overflow-hidden shadow card-hover">
+            <img
+              src="./assets/images/about/site-building.png"
+              alt="企业大楼外景"
+              class="w-full h-60 object-cover"
+            />
+          </div>
+          <div class="rounded overflow-hidden shadow card-hover">
+            <img
+              src="./assets/images/about/site-workshop.png"
+              alt="自动化生产车间"
+              class="w-full h-60 object-cover"
+            />
+          </div>
+          <div class="rounded overflow-hidden shadow card-hover">
+            <img
+              src="./assets/images/about/site-lab.png"
+              alt="研发实验室"
+              class="w-full h-60 object-cover"
+            />
+          </div>
+          <div class="rounded overflow-hidden shadow card-hover">
+            <img
+              src="./assets/images/about/site-storage.png"
+              alt="智能仓储区域"
+              class="w-full h-60 object-cover"
+            />
+          </div>
+          <div class="rounded overflow-hidden shadow card-hover">
+            <img
+              src="./assets/images/about/site-visit.png"
+              alt="客户参观交流"
+              class="w-full h-60 object-cover"
+            />
+          </div>
+          <div class="rounded overflow-hidden shadow card-hover">
+            <img
+              src="./assets/images/about/site-assemble.png"
+              alt="精密设备组装工位"
+              class="w-full h-60 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部询价引导区块 -->
+    <section class="py-16 px-8 max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">需要设备定制与商务咨询？</h2>
+      <p class="text-gray-500 mb-8 text-lg">
+        专业技术团队为您提供一站式自动化解决方案
+      </p>
+      <a
+        href="contact.html"
+        class="inline-block bg-blue-500 text-white px-8 py-3 rounded text-lg hover:bg-blue-600 transition-all"
+        >立即询价</a
+      >
+    </section>
+
+    <!-- 底部页脚 -->
+    <footer class="bg-slate-900 text-white py-10 px-8 mt-16">
+      <div class="max-w-7xl mx-auto text-center space-y-2">
+        <div>
+          <h4 class="text-lg font-bold mb-4">联系我们</h4>
+          <p>电话：138XXXX8888</p>
+          <p>邮箱：service@xxxcompany.com</p>
+          <p>地址：XX市XX产业园</p>
+        </div>
+      </div>
+      <div class="text-center mt-10 text-sm text-gray-400">
+        ©2026 XX公司 版权所有
+      </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
